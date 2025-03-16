@@ -99,19 +99,14 @@ export default function CurlCommandDisplay({
           }
         }
       }
-      
-      /**export async function proxy(request: Request) {
-  const response = await fetch('http://localhost:8000/api/proxy', {
-    method: 'POST',
-    body: request.body,
-  });
-  return response;
-} */
-      const response = await proxy(new Request(parsed.url, {
+
+      const response = await proxy({
+        url: parsed.url,
         method: parsed.method,
         headers: headers,
-        body: body,
-      }));
+        body: body
+      });
+
 
       // parse proxy response
       if (!response.ok) {

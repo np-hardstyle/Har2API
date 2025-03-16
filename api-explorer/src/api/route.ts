@@ -172,18 +172,20 @@ export async function GET(request: FormData){
  * Function that sends a proxy post request to backend proxy endpoint
  * To be used for running curl commands
  */
-export async function proxy(request: Request) {
-  // Read the request body properly
-  const body = await request.text(); // Read as text instead of passing a stream
+export async function proxy(requestData: {
+    url: string;
+    method: string;
+    headers: Record<string, string>;
+    body?: string;
+  }) {
 
   const response = await fetch('http://localhost:8000/proxy', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json', // Ensure JSON content type
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ body: body, url: request.url, method: request.method, headers: Object.fromEntries(request.headers) }),
+    body: JSON.stringify(requestData),
   });
 
-  console.log(response.status);
-  return response
+  return response;
 }
