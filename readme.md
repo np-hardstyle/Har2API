@@ -2,7 +2,7 @@
 
 A full-stack application with a Next.js frontend and FastAPI backend for exploring APIs.
 
-![Project Banner](https://via.placeholder.com/800x200?text=API+Explorer)
+![API Explorer](https://raw.githubusercontent.com/np-hardstyle/Har2API/main/docs/image.png)
 
 ## 📋 Overview
 
@@ -21,8 +21,8 @@ API Explorer is a containerized full-stack application that allows users to inte
 ### Step 1: Clone the repository
 
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/np-hardstyle/Har2API.git
+cd Har2API
 ```
 
 ### Step 2: Add API Configuration
