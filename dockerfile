@@ -1,4 +1,3 @@
-# Use Node.js as base image
 FROM node:18 AS frontend-builder
 
 # Set working directory for frontend
@@ -33,8 +32,20 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the backend code
 COPY apigateway /app/backend/
 
-# Copy startup script
-COPY start.sh /app/
+# Create start script directly in the container
+RUN echo '#!/bin/bash\n\
+\n\
+# Start the FastAPI backend\n\
+cd /app/backend\n\
+python backend.py &\n\
+\n\
+# Wait a moment to ensure backend starts\n\
+sleep 5\n\
+\n\
+# Start the Next.js frontend\n\
+cd /app/frontend\n\
+npm run start' > /app/start.sh
+
 RUN chmod +x /app/start.sh
 
 # Expose ports

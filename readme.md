@@ -42,6 +42,11 @@ Build the Docker image:
 docker build -t api-explorer .
 ```
 
+Alternatively (without cache)
+```bash
+docker build --no-cache -t api-explorer .
+```
+
 Run the container:
 
 ```bash
