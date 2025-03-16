@@ -2,7 +2,7 @@
 
 A full-stack application with a Next.js frontend and FastAPI backend for exploring APIs.
 
-![API Explorer](https://raw.githubusercontent.com/np-hardstyle/Har2API/main/docs/image.png)
+![API Explorer](https://raw.githubusercontent.com/np-hardstyle/Har2API/tree/docs/image.png)
 
 ## 📋 Overview
 
