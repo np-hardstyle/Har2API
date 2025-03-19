@@ -4,6 +4,9 @@ A full-stack application with a Next.js frontend and FastAPI backend for explori
 
 ![API Explorer](https://raw.githubusercontent.com/np-hardstyle/Har2API/tree/docs/image.png)
 
+## 📹 Demo 
+Check out the demo video: [Watch on YouTube](https://youtu.be/WtsjXHG-nCQ)
+
 ## 📋 Overview
 
 API Explorer is a containerized full-stack application that allows users to interact with APIs through an intuitive interface. The project consists of:
